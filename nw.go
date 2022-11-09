@@ -85,10 +85,10 @@ func Align(a, b string, match, mismatch, gap int) (alignA, alignB string, score 
 			j--
 		} else if p == Up {
 			aBytes = append(aBytes, a[i-1])
-			bBytes = append(bBytes, '-')
+			bBytes = append(bBytes, '·')
 			i--
 		} else if p == Left {
-			aBytes = append(aBytes, '-')
+			aBytes = append(aBytes, '·')
 			bBytes = append(bBytes, b[j-1])
 			j--
 		}
