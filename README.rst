@@ -37,7 +37,7 @@ From code::
     )
 
     func main() {
-        aln1, aln2, score := nwalgo.Align("GAAAAAAT", "GAAT", 1, -1, -1)
+        aln1, aln2, score := nwalgo.Align("GAAAAAAT", "GAAT", "*", 1, -1, -1)
     }
 
 -------------------------------------------------------------------------------
