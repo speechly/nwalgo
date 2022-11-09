@@ -15,7 +15,7 @@ func idx(i, j, bLen int) int {
 	return (i * bLen) + j
 }
 
-func Align(a, b string, match, mismatch, gap int) (alignA, alignB string, score int) {
+func Align(a, b, char string, match, mismatch, gap int) (alignA, alignB string, score int) {
 
 	aLen := len(a) + 1
 	bLen := len(b) + 1
@@ -85,10 +85,10 @@ func Align(a, b string, match, mismatch, gap int) (alignA, alignB string, score 
 			j--
 		} else if p == Up {
 			aBytes = append(aBytes, a[i-1])
-			bBytes = append(bBytes, '·')
+			bBytes = append(bBytes, char...)
 			i--
 		} else if p == Left {
-			aBytes = append(aBytes, '·')
+			aBytes = append(aBytes, char...)
 			bBytes = append(bBytes, b[j-1])
 			j--
 		}
